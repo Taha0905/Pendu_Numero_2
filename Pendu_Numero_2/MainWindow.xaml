@@ -11,15 +11,20 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
-        <Grid Grid.Column="0">
+
+        <!-- Titre,TextBox et Clavier-->
+
+        <Grid Grid.Column="0" Background="Black" Margin="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="100"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBox Grid.Row="0" Margin="10" Background="Black">
-            </TextBox>
+            <Label Grid.Row="0" Content="Jeu du pendu" Margin="10" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="White"/>
+            
+            <Grid Grid.Row="1">
+                
+            </Grid>
         </Grid>
         
         <Grid Grid.Column="1">
