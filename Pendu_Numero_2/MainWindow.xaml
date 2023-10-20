@@ -14,6 +14,8 @@
 
         <!-- Titre,TextBox et Clavier-->
 
+        <!-- Titre -->
+        
         <Grid Grid.Column="0" Background="Black" Margin="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -22,13 +24,84 @@
             </Grid.RowDefinitions>
             <Label Grid.Row="0" Content="Jeu du pendu" Margin="10" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="White"/>
             
+            <!-- TextBox -->
+            
             <Grid Grid.Row="1">
-                
+                <TextBox x:Name="txtMot" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="50" FontSize="24" Margin="10" TextAlignment="Center" TextWrapping="Wrap" Text="Mot à deviner" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="2"/>
             </Grid>
+
+            <!-- Clavier-->
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.Resources>
+                    <Style x:Key="Style" TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="Foreground"  Value="Black"/>
+                        <Setter Property="FontWeight"  Value="Bold"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                        <Setter Property="Margin" Value="1"/>
+                    </Style>
+                </Grid.Resources>
+
+                <Button x:Name="btnA" Grid.Column="0" Grid.Row="0" Content="A" Click="btnA_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnB" Grid.Column="1" Grid.Row="0" Content="B" Click="btnB_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnC" Grid.Column="2" Grid.Row="0" Content="C" Click="btnC_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnD" Grid.Column="3" Grid.Row="0" Content="D" Click="btnD_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnE" Grid.Column="4" Grid.Row="0" Content="E" Click="btnE_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnF" Grid.Column="5" Grid.Row="0" Content="F" Click="btnF_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnG" Grid.Column="0" Grid.Row="1" Content="G" Click="btnF_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnH" Grid.Column="1" Grid.Row="1" Content="H" Click="btnH_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnI" Grid.Column="2" Grid.Row="1" Content="I" Click="btnI_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnJ" Grid.Column="3" Grid.Row="1" Content="J" Click="btnJ_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnK" Grid.Column="4" Grid.Row="1" Content="K" Click="btnK_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnL" Grid.Column="5" Grid.Row="1" Content="L" Click="btnL_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnM" Grid.Column="0" Grid.Row="2" Content="M" Click="btnM_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnN" Grid.Column="1" Grid.Row="2" Content="N" Click="btnN_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnO" Grid.Column="2" Grid.Row="2" Content="O" Click="btnO_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnP" Grid.Column="3" Grid.Row="2" Content="P" Click="btnP_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnQ" Grid.Column="4" Grid.Row="2" Content="Q" Click="btnQ_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnR" Grid.Column="5" Grid.Row="2" Content="R" Click="btnR_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnS" Grid.Column="0" Grid.Row="3" Content="S" Click="btnS_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnT" Grid.Column="1" Grid.Row="3" Content="T" Click="btnT_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnU" Grid.Column="2" Grid.Row="3" Content="U" Click="btnU_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnV" Grid.Column="3" Grid.Row="3" Content="V" Click="btnV_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnW" Grid.Column="4" Grid.Row="3" Content="W" Click="btnW_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnX" Grid.Column="5" Grid.Row="3" Content="X" Click="btnX_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnY" Grid.Column="2" Grid.Row="4" Content="Y" Click="btnY_Click" Style="{StaticResource Style}"/>
+                <Button x:Name="btnZ" Grid.Column="3" Grid.Row="4" Content="Z" Click="btnZ_Click" Style="{StaticResource Style}"/>
+                
+
+
+
+
+
+
+            </Grid>
+
         </Grid>
         
+        
+        <!--Boutton facile et difficile, Dessin du pendu et nombre de vie-->
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
