@@ -18,6 +18,8 @@
                 <RowDefinition Height="100"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+            <TextBox Grid.Row="0" Margin="10" Background="Black">
+            </TextBox>
         </Grid>
         
         <Grid Grid.Column="1">
