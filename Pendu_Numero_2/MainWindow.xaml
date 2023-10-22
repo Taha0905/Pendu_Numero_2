@@ -215,7 +215,7 @@
             <!-- Dessin du pendu -->
 
             <Grid Grid.Row="1">
-                <Image x:Name="Image" Width="100" Height="100" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                <Image x:Name="Image" Width="200" Height="200"  />
             </Grid>
 
 

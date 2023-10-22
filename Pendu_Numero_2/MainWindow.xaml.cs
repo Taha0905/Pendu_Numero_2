@@ -26,7 +26,6 @@ namespace Pendu_Numero_2
         {
             InitializeComponent();
 
-            // Remplir les listes de pays et de capitales (en majuscules)
             pays.Add("FRANCE");
             pays.Add("ESPAGNE");
             pays.Add("ITALIE");
