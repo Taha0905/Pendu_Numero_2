@@ -6,99 +6,228 @@
         xmlns:local="clr-namespace:Pendu_Numero_2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
     <Grid >
+
         <Grid.ColumnDefinitions>
+
             <ColumnDefinition Width="*"/>
+
             <ColumnDefinition Width="*"/>
+
         </Grid.ColumnDefinitions>
+
+
 
         <!-- Titre,TextBox et Clavier-->
 
+
+
         <!-- Titre -->
-        
+
+
+
         <Grid Grid.Column="0" Background="Black" Margin="10">
+
             <Grid.RowDefinitions>
+
                 <RowDefinition Height="*"/>
+
                 <RowDefinition Height="100"/>
+
                 <RowDefinition Height="*"/>
+
             </Grid.RowDefinitions>
+
             <Label Grid.Row="0" Content="Jeu du pendu" Margin="10" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="White"/>
-            
+
+
+
             <!-- TextBox -->
-            
+
+
+
             <Grid Grid.Row="1">
-                <TextBox x:Name="txtMot" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="50" FontSize="24" Margin="10" TextAlignment="Center" TextWrapping="Wrap" Text="Mot à deviner" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="2"/>
+
+                <TextBox x:Name="TBmot" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="50" FontSize="24" Margin="10" TextAlignment="Center" TextWrapping="Wrap" Text="Mot à deviner" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="2" IsEnabled="False"/>
+
             </Grid>
+
+
 
             <!-- Clavier-->
 
-            <Grid Grid.Row="2">
+
+
+            <Grid Name="Clavier" Grid.Row="2">
+
                 <Grid.ColumnDefinitions>
+
                     <ColumnDefinition Width="*"/>
+
                     <ColumnDefinition Width="*"/>
+
                     <ColumnDefinition Width="*"/>
+
                     <ColumnDefinition Width="*"/>
+
                     <ColumnDefinition Width="*"/>
+
                     <ColumnDefinition Width="*"/>
+
                 </Grid.ColumnDefinitions>
+
                 <Grid.RowDefinitions>
+
                     <RowDefinition Height="*"/>
+
                     <RowDefinition Height="*"/>
+
                     <RowDefinition Height="*"/>
+
                     <RowDefinition Height="*"/>
+
                     <RowDefinition Height="*"/>
+
                 </Grid.RowDefinitions>
 
+
+
                 <Grid.Resources>
+
                     <Style x:Key="Style" TargetType="{x:Type Button}">
+
                         <Setter Property="Background" Value="White"/>
+
                         <Setter Property="Foreground"  Value="Black"/>
+
                         <Setter Property="FontWeight"  Value="Bold"/>
+
                         <Setter Property="FontSize" Value="7"/>
+
                         <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+
                         <Setter Property="Margin" Value="7"/>
+
                     </Style>
+
                 </Grid.Resources>
 
-                <Button x:Name="btnA" Grid.Column="0" Grid.Row="0" Content="A" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnB" Grid.Column="1" Grid.Row="0" Content="B" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnC" Grid.Column="2" Grid.Row="0" Content="C" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnD" Grid.Column="3" Grid.Row="0" Content="D" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnE" Grid.Column="4" Grid.Row="0" Content="E" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnF" Grid.Column="5" Grid.Row="0" Content="F" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnG" Grid.Column="0" Grid.Row="1" Content="G" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnH" Grid.Column="1" Grid.Row="1" Content="H" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnI" Grid.Column="2" Grid.Row="1" Content="I" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnJ" Grid.Column="3" Grid.Row="1" Content="J" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnK" Grid.Column="4" Grid.Row="1" Content="K" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnL" Grid.Column="5" Grid.Row="1" Content="L" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnM" Grid.Column="0" Grid.Row="2" Content="M" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnN" Grid.Column="1" Grid.Row="2" Content="N" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnO" Grid.Column="2" Grid.Row="2" Content="O" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnP" Grid.Column="3" Grid.Row="2" Content="P" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnQ" Grid.Column="4" Grid.Row="2" Content="Q" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnR" Grid.Column="5" Grid.Row="2" Content="R" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnS" Grid.Column="0" Grid.Row="3" Content="S" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnT" Grid.Column="1" Grid.Row="3" Content="T" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnU" Grid.Column="2" Grid.Row="3" Content="U" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnV" Grid.Column="3" Grid.Row="3" Content="V" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnW" Grid.Column="4" Grid.Row="3" Content="W" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnX" Grid.Column="5" Grid.Row="3" Content="X" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnY" Grid.Column="2" Grid.Row="4" Content="Y" Click="btnLetter_Click" Style="{StaticResource Style}"/>
-                <Button x:Name="btnZ" Grid.Column="3" Grid.Row="4" Content="Z" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+
+                <Button  Grid.Column="0" Grid.Row="0" Content="A" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="1" Grid.Row="0" Content="B" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="2" Grid.Row="0" Content="C" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="3" Grid.Row="0" Content="D" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="4" Grid.Row="0" Content="E" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="5" Grid.Row="0" Content="F" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="0" Grid.Row="1" Content="G" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="1" Grid.Row="1" Content="H" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="2" Grid.Row="1" Content="I" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="3" Grid.Row="1" Content="J" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="4" Grid.Row="1" Content="K" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="5" Grid.Row="1" Content="L" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="0" Grid.Row="2" Content="M" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="1" Grid.Row="2" Content="N" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="2" Grid.Row="2" Content="O" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="3" Grid.Row="2" Content="P" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="4" Grid.Row="2" Content="Q" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="5" Grid.Row="2" Content="R" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="0" Grid.Row="3" Content="S" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="1" Grid.Row="3" Content="T" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="2" Grid.Row="3" Content="U" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="3" Grid.Row="3" Content="V" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="4" Grid.Row="3" Content="W" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="5" Grid.Row="3" Content="X" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="2" Grid.Row="4" Content="Y" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+                <Button  Grid.Column="3" Grid.Row="4" Content="Z" Click="btnLetter_Click" Style="{StaticResource Style}"/>
+
+            </Grid>
+
+
+
+        </Grid>
+
+
+
+
+
+        <!--Boutton pays et capitale, Dessin du pendu et nombre de vie-->
+
+        <Grid Grid.Column="1" Background="Black" Margin="10">
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="100"/>
+
+                <RowDefinition Height="*"/>
+
+                <RowDefinition Height="100"/>
+
+            </Grid.RowDefinitions>
+
+
+
+            <!-- Boutton pays et capitale -->
+
+            <Grid Grid.Row="0">
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="*"/>
+
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="BTNpays" Grid.Column="0" Content="Pays" Click="btnPays_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="50" FontSize="24" Margin="10" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="2"/>
+
+                <Button x:Name="BTNcapitale" Grid.Column="1" Content="Capitale" Click="btnCapitale_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="50" FontSize="24" Margin="10" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="2"/>
+
+            </Grid>
+
+
+            <!-- Dessin du pendu -->
+
+            <Grid Grid.Row="1" Name="Image"></Grid>
+
+
+
+            <!-- Nombre de vie -->
+
+            <Grid Grid.Row="2">
+
+                <TextBox x:Name="TBvie" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="50" FontSize="24" Margin="10" TextAlignment="Center" TextWrapping="Wrap" Text="Nombre de vie" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="2" IsEnabled="False"/>
+
             </Grid>
 
         </Grid>
-        
-        
-        <!--Boutton facile et difficile, Dessin du pendu et nombre de vie-->
-        <Grid Grid.Column="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="100"/>
-            </Grid.RowDefinitions>
-        </Grid>
+
     </Grid>
 
 </Window>
