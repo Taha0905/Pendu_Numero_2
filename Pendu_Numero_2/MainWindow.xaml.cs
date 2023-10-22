@@ -48,6 +48,9 @@ namespace Pendu_Numero_2
             vie = 7;
             TBvie.Text = "Vies : " + vie.ToString();
 
+            // Mettre à jour l'image
+            Image.Source = null;
+
             // Prendre un mot aléatoire dans la liste de pays
             Random aleatoire = new Random();
             int index = aleatoire.Next(pays.Count);
@@ -61,6 +64,9 @@ namespace Pendu_Numero_2
             {
                 button.IsEnabled = true;
             }
+
+            // Mettre à jour l'image
+            UpdateImage();
         }
 
         private void btnCapitale_Click(object sender, RoutedEventArgs e)
@@ -68,6 +74,9 @@ namespace Pendu_Numero_2
             // Réinitialiser le nombre de vies à 7
             vie = 7;
             TBvie.Text = "Vies : " + vie.ToString();
+
+            // Mettre à jour l'image
+            Image.Source = null;
 
             // Prendre un mot aléatoire dans la liste de capitales
             Random aleatoire = new Random();
@@ -82,6 +91,9 @@ namespace Pendu_Numero_2
             {
                 button.IsEnabled = true;
             }
+
+            // Mettre à jour l'image
+            UpdateImage();
         }
 
         private void btnLetter_Click(object sender, RoutedEventArgs e)
@@ -129,6 +141,9 @@ namespace Pendu_Numero_2
                 // Réinitialiser le jeu
                 ResetGame();
             }
+
+            // Mettre à jour l'image
+            UpdateImage();
         }
 
         private void ResetGame()
@@ -139,6 +154,20 @@ namespace Pendu_Numero_2
             foreach (Button button in Clavier.Children)
             {
                 button.IsEnabled = false;
+            }
+
+            // Mettre à jour l'image
+            UpdateImage();
+        }
+
+        private void UpdateImage()
+        {
+            int imageIndex = 7 - vie; // Calcul de l'index de l'image en fonction du nombre de vies restantes
+            if (imageIndex >= 1 && imageIndex <= 7)
+            {
+                string imagePath = $"pack://application:,,,/Ressources/Images/{imageIndex}.png";
+                ImageSource imageSource = new BitmapImage(new Uri(imagePath));
+                Image.Source = imageSource;
             }
         }
     }
