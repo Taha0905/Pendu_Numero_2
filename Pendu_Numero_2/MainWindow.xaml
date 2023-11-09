@@ -107,7 +107,7 @@
 
                         <Setter Property="TextBlock.TextAlignment" Value="Center"/>
 
-                        <Setter Property="Margin" Value="7"/>
+                        <Setter Property="Margin" Value="3"/>
 
                     </Style>
 
@@ -220,11 +220,18 @@
 
 
 
-            <!-- Nombre de vie -->
+            <!-- Nombre de vie et timer -->
 
             <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
 
-                <TextBox x:Name="TBvie" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="50" FontSize="24" Margin="10" TextAlignment="Center" TextWrapping="Wrap" Text="Nombre de vie" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="2" IsEnabled="False"/>
+                    <ColumnDefinition Width="*"/>
+
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:Name="TBvie" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="59" FontSize="20" TextAlignment="Center" TextWrapping="Wrap" Text="Nombre de vie" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="2" IsEnabled="False"/>
 
             </Grid>
 
