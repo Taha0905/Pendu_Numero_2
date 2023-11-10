@@ -28,7 +28,37 @@ namespace Pendu_Numero_2
             InitializeComponent();
 
             pays.Add("FRANCE");
-
+            pays.Add("ESPAGNE");
+            pays.Add("ITALIE");
+            pays.Add("ALLEMAGNE");
+            pays.Add("PORTUGAL");
+            pays.Add("BELGIQUE");
+            pays.Add("SUISSE");
+            pays.Add("ROYAUME-UNI");
+            pays.Add("AUTRICHE");
+            pays.Add("IRLANDE");
+            pays.Add("SUEDE");
+            pays.Add("DANEMARK");
+            pays.Add("FINLANDE");
+            pays.Add("NORVEGE");
+            pays.Add("GRECE");
+            pays.Add("TURQUIE");
+            pays.Add("POLOGNE");
+            pays.Add("TCHEQUIE");
+            pays.Add("HONGRIE");
+            pays.Add("ROUMANIE");
+            pays.Add("BULGARIE");
+            pays.Add("CROATIE");
+            pays.Add("SERBIE");
+            pays.Add("SLOVENIE");
+            pays.Add("SLOVAQUIE");
+            pays.Add("UKRAINE");
+            pays.Add("BIELORUSSIE");
+            pays.Add("RUSSIE");
+            pays.Add("ESTONIE");
+            pays.Add("LETTONIE");
+            pays.Add("LITUANIE");
+            pays.Add("MOLDAVIE");
             // Ajoutez d'autres pays ici...
 
             capitales.Add("PARIS");
