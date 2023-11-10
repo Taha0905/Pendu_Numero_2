@@ -147,6 +147,8 @@ namespace Pendu_Numero_2
             startGame(capitales);
         }
 
+
+
         private void btnLetter_Click(object sender, RoutedEventArgs e)
         {
             // Récupérer la lettre du bouton cliqué
@@ -181,8 +183,6 @@ namespace Pendu_Numero_2
 
             // Mettre à jour l'image
             UpdateImage();
-
-
 
             // Vérifier si le joueur a gagné ou perdu
             if (TBmot.Text == motMystere)
