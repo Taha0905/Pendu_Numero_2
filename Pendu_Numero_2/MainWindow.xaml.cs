@@ -185,6 +185,11 @@ namespace Pendu_Numero_2
                 button.IsEnabled = false;
             }
 
+            // Mettre à jour l'image
+            UpdateImage();
+
+
+
             // Vérifier si le joueur a gagné ou perdu
             if (TBmot.Text == motMystere)
             {
@@ -194,13 +199,15 @@ namespace Pendu_Numero_2
             }
             else if (vie == 0)
             {
+
                 MessageBox.Show("Désolé, vous avez perdu. Le mot était : " + motMystere);
+
                 // Réinitialiser le jeu
                 ResetGame();
             }
 
-            // Mettre à jour l'image
-            UpdateImage();
+     
+
         }
 
         private void ResetGame()
@@ -221,6 +228,8 @@ namespace Pendu_Numero_2
         private void UpdateImage()
         {
             int imageIndex = 7 - vie; // Calcul de l'index de l'image en fonction du nombre de vies restantes
+
+
             if (imageIndex >= 1 && imageIndex <= 7)
             {
                 string imagePath = $"pack://application:,,,/Ressources/Images/{imageIndex}.png";
@@ -229,7 +238,7 @@ namespace Pendu_Numero_2
             }
         }
 
-        private void btnIndice_Click(object sender, RoutedEventArgs e)
+        private void BTNindice_Click(object sender, RoutedEventArgs e)
         {
             if (vie > 0)
             {

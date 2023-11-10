@@ -232,7 +232,7 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBox x:Name="TBvie" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="59" FontSize="20" TextAlignment="Center" TextWrapping="Wrap" Text="Nombre de vie" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="2" IsEnabled="False"/>
-                <Button x:Name="BTNindice" Grid.Column="1" Content="Indice" Click="btnIndice_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="50" FontSize="24" Margin="10" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="2" IsEnabled="False"/>
+                <Button x:Name="BTNindice" Grid.Column="1" Content="Indice" Click="BTNindice_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="50" FontSize="24" Margin="10" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="2" IsEnabled="False"/>
             </Grid>
 
         </Grid>
