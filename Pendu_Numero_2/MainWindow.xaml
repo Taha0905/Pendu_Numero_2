@@ -43,13 +43,21 @@
 
 
 
-            <!-- TextBox -->
+            <!-- TextBox et boutton règle -->
 
 
 
             <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
 
-                <TextBox x:Name="TBmot" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="50" FontSize="24" Margin="10" TextAlignment="Center" TextWrapping="Wrap" Text="Mot à deviner" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="2" IsEnabled="False"/>
+                    <ColumnDefinition Width="150"/>
+
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="BTNregle" Grid.Column="0" Content="Règle" Click="btnRegle_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="50" FontSize="24" Margin="10" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="2"/>
+                <TextBox x:Name="TBmot" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="50" FontSize="24" Margin="10" TextAlignment="Center" TextWrapping="Wrap" Text="Mot à deviner" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="2" IsEnabled="False"/>
 
             </Grid>
 

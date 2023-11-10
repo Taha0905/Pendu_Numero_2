@@ -200,7 +200,11 @@ namespace Pendu_Numero_2
                 ResetGame();
             }
 
-     
+            // Désactiver le bouton d'indice si le joueur a une seule vie restante
+            if (vie == 1)
+            {
+                BTNindice.IsEnabled = false;
+            }
 
         }
 
@@ -259,6 +263,11 @@ namespace Pendu_Numero_2
                 // Mettre à jour l'image
                 UpdateImage();
             }
+        }
+
+        private void btnRegle_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
