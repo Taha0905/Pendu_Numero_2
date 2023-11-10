@@ -267,7 +267,18 @@ namespace Pendu_Numero_2
 
         private void btnRegle_Click(object sender, RoutedEventArgs e)
         {
+            string regles = "Les règles du jeu sont les suivantes :\n\n" +
+                            "1. Choisissez une catégorie (Pays ou Capitales) en cliquant sur le bouton correspondant.\n" +
+                            "2. Un mot mystère sera sélectionné aléatoirement dans la catégorie choisie.\n" +
+                            "3. Devinez les lettres en cliquant sur les boutons du clavier.\n" +
+                            "4. Vous avez 7 vies. Chaque mauvaise lettre vous fait perdre une vie.\n" +
+                            "5. Utilisez le bouton Indice pour révéler une lettre du mot mystère (1 utilisation par partie).\n" +
+                            "   Note : Vous ne pouvez pas utiliser l'indice s'il ne vous reste qu'une vie.\n" +
+                            "6. Gagnez en devinant correctement le mot ou perdez si vous épuisez toutes vos vies.\n" +
+                            "7. Vous pouvez cliquer sur les boutons 'Pays' ou 'Capitale' à la fin d'une partie pour recommencer.\n\n" +
+                            "Amusez-vous bien !";
 
+            MessageBox.Show(regles, "Règles du jeu");
         }
     }
 }

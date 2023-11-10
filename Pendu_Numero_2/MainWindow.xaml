@@ -38,8 +38,18 @@
                 <RowDefinition Height="*"/>
 
             </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
 
-            <Label Grid.Row="0" Content="Jeu du pendu" Margin="10" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="White"/>
+                    <RowDefinition Height="*"/>
+
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Content="Par Taha KHELIFI" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="16"/>
+                <Label Grid.Row="1" Content="Jeu du pendu" Margin="10" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="White"/>
+            </Grid>
+           
 
 
 
@@ -225,7 +235,7 @@
             <!-- Dessin du pendu -->
 
             <Grid Grid.Row="1">
-                <Image x:Name="Image" Width="200" Height="200">
+                <Image x:Name="Image" Width="200" Height="190">
                     <Image.Source>
                         <BitmapImage UriSource="pack://application:,,,/Ressources/Images/debut.jpg"/>
                     </Image.Source>
