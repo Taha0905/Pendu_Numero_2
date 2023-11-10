@@ -232,7 +232,7 @@ namespace Pendu_Numero_2
 
             if (imageIndex >= 1 && imageIndex <= 7)
             {
-                string imagePath = $"pack://application:,,,/Ressources/Images/{imageIndex}.png";
+                string imagePath = $"pack://application:,,,/Ressources/Images/{imageIndex}.jpg";
                 ImageSource imageSource = new BitmapImage(new Uri(imagePath));
                 Image.Source = imageSource;
             }

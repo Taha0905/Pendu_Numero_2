@@ -94,14 +94,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Resource Include="Ressources\Images\1.png" />
-    <Resource Include="Ressources\Images\2.png" />
-    <Resource Include="Ressources\Images\3.png" />
-    <Resource Include="Ressources\Images\4.png" />
-    <Resource Include="Ressources\Images\5.png" />
-    <Resource Include="Ressources\Images\6.png" />
-    <Resource Include="Ressources\Images\7.png" />
+    <Resource Include="Ressources\Images\1.jpg" />
+    <Resource Include="Ressources\Images\2.jpg" />
+    <Resource Include="Ressources\Images\3.jpg" />
+    <Resource Include="Ressources\Images\4.jpg" />
+    <Resource Include="Ressources\Images\5.jpg" />
+    <Resource Include="Ressources\Images\6.jpg" />
+    <Resource Include="Ressources\Images\7.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
