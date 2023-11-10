@@ -22,42 +22,13 @@ namespace Pendu_Numero_2
         private int vie = 7;
         private string motMystere;
 
+
         public MainWindow()
         {
             InitializeComponent();
 
             pays.Add("FRANCE");
-            pays.Add("ESPAGNE");
-            pays.Add("ITALIE");
-            pays.Add("ALLEMAGNE");
-            pays.Add("PORTUGAL");
-            pays.Add("BELGIQUE");
-            pays.Add("SUISSE");
-            pays.Add("ROYAUME-UNI");
-            pays.Add("AUTRICHE");
-            pays.Add("IRLANDE");
-            pays.Add("SUEDE");
-            pays.Add("DANEMARK");
-            pays.Add("FINLANDE");
-            pays.Add("NORVEGE");
-            pays.Add("GRECE");
-            pays.Add("TURQUIE");
-            pays.Add("POLOGNE");
-            pays.Add("TCHEQUIE");
-            pays.Add("HONGRIE");
-            pays.Add("ROUMANIE");
-            pays.Add("BULGARIE");
-            pays.Add("CROATIE");
-            pays.Add("SERBIE");
-            pays.Add("SLOVENIE");
-            pays.Add("SLOVAQUIE");
-            pays.Add("UKRAINE");
-            pays.Add("BIELORUSSIE");
-            pays.Add("RUSSIE");
-            pays.Add("ESTONIE");
-            pays.Add("LETTONIE");
-            pays.Add("LITUANIE");
-            pays.Add("MOLDAVIE");
+
             // Ajoutez d'autres pays ici...
 
             capitales.Add("PARIS");
@@ -96,6 +67,8 @@ namespace Pendu_Numero_2
 
         private void btnPays_Click(object sender, RoutedEventArgs e)
         {
+            // Activer le bouton d'indice
+            BTNindice.IsEnabled = true;
             // Réinitialiser le nombre de vies à 7
             vie = 7;
             TBvie.Text = "Vies : " + vie.ToString();
@@ -123,6 +96,8 @@ namespace Pendu_Numero_2
 
         private void btnCapitale_Click(object sender, RoutedEventArgs e)
         {
+            // Activer le bouton d'indice
+            BTNindice.IsEnabled = true;
             // Réinitialiser le nombre de vies à 7
             vie = 7;
             TBvie.Text = "Vies : " + vie.ToString();
@@ -207,7 +182,8 @@ namespace Pendu_Numero_2
             {
                 button.IsEnabled = false;
             }
-
+            // Désactiver le bouton d'indice
+            BTNindice.IsEnabled = false;
             // Mettre à jour l'image
             UpdateImage();
         }
@@ -220,6 +196,34 @@ namespace Pendu_Numero_2
                 string imagePath = $"pack://application:,,,/Ressources/Images/{imageIndex}.png";
                 ImageSource imageSource = new BitmapImage(new Uri(imagePath));
                 Image.Source = imageSource;
+            }
+        }
+
+        private void btnIndice_Click(object sender, RoutedEventArgs e)
+        {
+            if (vie > 0)
+            {
+                // Trouver la première lettre cachée dans le mot mystère
+                char[] motAffiche = TBmot.Text.ToCharArray();
+                for (int i = 0; i < motMystere.Length; i++)
+                {
+                    if (motMystere[i] != '*' && motAffiche[i] == '*')
+                    {
+                        motAffiche[i] = motMystere[i];
+                        break;
+                    }
+                }
+                TBmot.Text = new string(motAffiche);
+
+                // Décrémenter le nombre de vies
+                vie--;
+                TBvie.Text = "Vies : " + vie.ToString();
+
+                // Désactiver le bouton d'indice après utilisation
+                BTNindice.IsEnabled = false;
+
+                // Mettre à jour l'image
+                UpdateImage();
             }
         }
     }
