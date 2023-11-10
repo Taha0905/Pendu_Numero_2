@@ -21,6 +21,8 @@ namespace Pendu_Numero_2
         List<string> capitales = new List<string>();
         private int vie = 7;
         private string motMystere;
+        private ImageSource debutImageSource;
+
 
 
         public MainWindow()
@@ -59,6 +61,7 @@ namespace Pendu_Numero_2
             pays.Add("LETTONIE");
             pays.Add("LITUANIE");
             pays.Add("MOLDAVIE");
+            pays.Add("BOSNIE-HERZEGOVINE");
             // Ajoutez d'autres pays ici...
 
             capitales.Add("PARIS");
@@ -86,7 +89,15 @@ namespace Pendu_Numero_2
             capitales.Add("BELGRADE");
             capitales.Add("LJUBLJANA");
             capitales.Add("BRATISLAVA");
+            capitales.Add("KIEV");
+            capitales.Add("MINSK");
+            capitales.Add("SARAJEVO");
             // Ajoutez d'autres capitales ici...
+
+            // Charger et stocker l'image de départ
+            string debutImagePath = "pack://application:,,,/Ressources/Images/debut.jpg";
+            debutImageSource = new BitmapImage(new Uri(debutImagePath));
+            Image.Source = debutImageSource;
 
             // Désactiver tous les boutons du clavier au démarrage
             foreach (Button button in Clavier.Children)
@@ -95,21 +106,23 @@ namespace Pendu_Numero_2
             }
         }
 
-        private void btnPays_Click(object sender, RoutedEventArgs e)
+
+        public void startGame(List<string> LisInfo)
         {
+            // Remettre l'image de départ
+            Image.Source = debutImageSource;
+
             // Activer le bouton d'indice
             BTNindice.IsEnabled = true;
+
             // Réinitialiser le nombre de vies à 7
             vie = 7;
             TBvie.Text = "Vies : " + vie.ToString();
 
-            // Mettre à jour l'image
-            Image.Source = null;
-
-            // Prendre un mot aléatoire dans la liste de pays
+            // Prendre un mot aléatoire dans la liste de capitales
             Random aleatoire = new Random();
-            int index = aleatoire.Next(pays.Count);
-            motMystere = pays[index];
+            int index = aleatoire.Next(LisInfo.Count);
+            motMystere = LisInfo[index];
 
             // Cacher le mot avec des *
             TBmot.Text = new string('*', motMystere.Length);
@@ -124,33 +137,14 @@ namespace Pendu_Numero_2
             UpdateImage();
         }
 
+        private void btnPays_Click(object sender, RoutedEventArgs e)
+        {
+            startGame(pays);
+        }
+
         private void btnCapitale_Click(object sender, RoutedEventArgs e)
         {
-            // Activer le bouton d'indice
-            BTNindice.IsEnabled = true;
-            // Réinitialiser le nombre de vies à 7
-            vie = 7;
-            TBvie.Text = "Vies : " + vie.ToString();
-
-            // Mettre à jour l'image
-            Image.Source = null;
-
-            // Prendre un mot aléatoire dans la liste de capitales
-            Random aleatoire = new Random();
-            int index = aleatoire.Next(capitales.Count);
-            motMystere = capitales[index];
-
-            // Cacher le mot avec des *
-            TBmot.Text = new string('*', motMystere.Length);
-
-            // Activer les boutons du clavier
-            foreach (Button button in Clavier.Children)
-            {
-                button.IsEnabled = true;
-            }
-
-            // Mettre à jour l'image
-            UpdateImage();
+            startGame(capitales);
         }
 
         private void btnLetter_Click(object sender, RoutedEventArgs e)
@@ -236,6 +230,7 @@ namespace Pendu_Numero_2
                 ImageSource imageSource = new BitmapImage(new Uri(imagePath));
                 Image.Source = imageSource;
             }
+
         }
 
         private void BTNindice_Click(object sender, RoutedEventArgs e)
@@ -266,4 +261,4 @@ namespace Pendu_Numero_2
             }
         }
     }
-}//fin
+}

@@ -215,8 +215,13 @@
             <!-- Dessin du pendu -->
 
             <Grid Grid.Row="1">
-                <Image x:Name="Image" Width="200" Height="200"  />
+                <Image x:Name="Image" Width="200" Height="200">
+                    <Image.Source>
+                        <BitmapImage UriSource="pack://application:,,,/Ressources/Images/debut.jpg"/>
+                    </Image.Source>
+                </Image>
             </Grid>
+
 
 
 
