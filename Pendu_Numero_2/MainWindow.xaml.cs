@@ -121,6 +121,8 @@ namespace Pendu_Numero_2
         //Déclaration et implémentation de la méthode startGame qui prend une liste de chaînes (List<string>) en paramètre.
         public void startGame(List<string> LisInfo)
         {
+
+
             // Remettre l'image de départ
             Image.Source = debutImageSource; // Image.Source est de type ImageSource
 
